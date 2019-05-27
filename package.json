@@ -1,0 +1,23 @@
+{
+  "name": "eitz.me",
+  "version": "1.0.0",
+  "description": "Eitz's website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eitz/eitz.me.git"
+  },
+  "author": "Richard Eitz <richard@eitz.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eitz/eitz.me/issues"
+  },
+  "homepage": "https://github.com/Eitz/eitz.me#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
