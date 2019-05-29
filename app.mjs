@@ -20,13 +20,11 @@ app.use('/api/', [
 ]);
 
 // frontend
-app.get('/', (req, res) => res.sendFile('index.html', {root: 'frontend/build'}));
 app.use(express.static('frontend/build'));
+app.use(webAppHandler);
 
-app.use(notFoundHandler);
+function webAppHandler(req, res) {
+  return res.sendFile('index.html', {root: 'frontend/build'});
+}
 
 app.listen(80, () => console.log('eitz.me listening on port 80!'));
-
-function notFoundHandler(req, res) {
-  return res.status(404).send('404');
-}
