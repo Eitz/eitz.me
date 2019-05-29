@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import BaseURL from '../misc/BaseURL';
 import './BlogHome.css';
 
 class BlogHome extends React.Component {
@@ -10,7 +11,7 @@ class BlogHome extends React.Component {
   }  
 
   fetchBlogHomeData() {
-    return fetch('/api/blog', { accept: 'application/json' })
+    return fetch(`${BaseURL}/api/blog`, { accept: 'application/json' })
       .then((response) => {
         return response.json();
       })

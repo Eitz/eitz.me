@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import BaseURL from '../misc/BaseURL';
+import BlogPost from '../components/BlogPost';
+
 import './BlogPost.css';
 
-class BlogPost extends React.Component {
+class BlogPostPage extends React.Component {
     
     state = {
         blog: null,
@@ -11,7 +14,7 @@ class BlogPost extends React.Component {
     }  
     
     fetchPostData(postSlug) {
-        return fetch(`/api/blog/p/${postSlug}`, { accept: 'application/json' })
+        return fetch(`${BaseURL}/api/blog/p/${postSlug}`, { accept: 'application/json' })
             .then((response) => {
                 return response.json();
             })
@@ -23,11 +26,7 @@ class BlogPost extends React.Component {
     }
 
     renderPost(postText) {
-        return (
-            <code>
-                {postText}
-            </code>
-        )
+        return <BlogPost postText={postText} />;
     }
 
     render() {
@@ -52,4 +51,4 @@ class BlogPost extends React.Component {
     }
 }
 
-export default BlogPost;
+export default BlogPostPage;
