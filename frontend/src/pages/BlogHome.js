@@ -10,7 +10,7 @@ class BlogHome extends React.Component {
   }  
 
   fetchBlogHomeData() {
-    return fetch('http://localhost/api/blog', { accept: 'application/json' })
+    return fetch('/api/blog', { accept: 'application/json' })
       .then((response) => {
         return response.json();
       })
@@ -35,7 +35,7 @@ class BlogHome extends React.Component {
       this.fetchBlogHomeData();
       return <p>Loading...</p>
     }
-    
+
     return (
       <div className="BlogHome">
         <h1>Blog: {this.state.blog.title}</h1>

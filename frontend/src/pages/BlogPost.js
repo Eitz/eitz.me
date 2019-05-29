@@ -11,7 +11,7 @@ class BlogPost extends React.Component {
     }  
     
     fetchPostData(postSlug) {
-        return fetch(`http://localhost/api/blog/p/${postSlug}`, { accept: 'application/json' })
+        return fetch(`/api/blog/p/${postSlug}`, { accept: 'application/json' })
             .then((response) => {
                 return response.json();
             })
