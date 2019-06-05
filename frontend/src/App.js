@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import BlogHome from './pages/BlogHome';
 import BlogPost from './pages/BlogPost';
-
+import NotFound from './pages/NotFound';
 
 const PrimaryLayout = props => {
   return (
@@ -14,6 +14,7 @@ const PrimaryLayout = props => {
         <Switch>
           <Route path="/" exact component={BlogHome} />
           <Route path="/p/:postSlug" component={BlogPost} />
+          <Route component={NotFound} />
         </Switch>
         <hr />
         <p>
