@@ -1,7 +1,7 @@
 import express from 'express';
 
-import BlogController from './lib/controllers/BlogController.mjs';
-import PostController from './lib/controllers/PostController.mjs';
+import BlogController from './backend/lib/controllers/BlogController.mjs';
+import PostController from './backend/lib/controllers/PostController.mjs';
 
 var app = express();
 

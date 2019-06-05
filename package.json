@@ -5,10 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-backend": "SET NODE_ENV=development&& nodemon --experimental-modules app.mjs",
-    "backend": "SET NODE_ENV=production&& node --experimental-modules app.mjs",
-    "dev-frontend": "",
-    "frontend": ""
+    "start": "SET NODE_ENV=development&& nodemon --experimental-modules app.mjs",
+    "production": "SET NODE_ENV=production&& node --experimental-modules app.mjs"
   },
   "repository": {
     "type": "git",
