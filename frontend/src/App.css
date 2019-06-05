@@ -2,3 +2,7 @@ body {
   width: 500px;
   margin: 50px auto;
 }
+
+.Author {
+  font-size: 14px;
+}
