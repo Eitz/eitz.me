@@ -16,7 +16,12 @@ export default class PostController {
     }
 
     async postNotFound(req, res, next) {
-        return res.status(404).send('404');
+        return res.status(404).json({
+            data: {
+                post: null,
+                blog: BlogModel.getBasicData()
+            }
+        });
     }
 
     async viewPost(req, res, next) {
